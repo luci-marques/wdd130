@@ -25,17 +25,22 @@ body {
 header {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo-box img {
+    height: 80px;
 }
 
 header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     list-style-type: none;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    gap: 1.5rem;
 }
 
 header nav ul li a {
@@ -45,7 +50,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--accent1-color);
 }
 
 /* Hero Section */
@@ -107,30 +112,65 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Adventure Section - Image Grid */
-section img {
+/* History Section Grid Layout */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.history-content img {
     width: 100%;
-    max-width: 300px;
     height: auto;
-    margin: 10px;
-    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Adventure Gallery Section with Flex and Figure */
+.gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    flex: 1 1 calc(20% - 1rem);
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
 }
 
 /* Footer Styling */
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-footer .sociallinks a {
-    margin: 0 10px;
-    display: inline-block;
+footer .sociallinks {
+    display: flex;
+    gap: 1rem;
 }
 
 footer .sociallinks a img {
@@ -142,3 +182,4 @@ footer .sociallinks a img {
 footer .sociallinks a:hover {
     opacity: 0.7;
 }
+
