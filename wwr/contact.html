@@ -1,5 +1,4 @@
 <!-- Learning HTML Forms -->
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -43,9 +42,9 @@
       <p><strong>Address:</strong> 123 Rapids Lane, River City, UT 84741</p>
       <p><strong>Phone:</strong> (123) 456-7890</p>
       <p><strong>Email:</strong> contact@whitewaterrafting.com</p>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3810.796336336571!2d-112.11760330300561!3d41.625425165652096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87549df3b16471a5%3A0x747d7ed31cea47e7!2sBear%20River%20City%2C%20UT!5e0!3m2!1spt-BR!2sus!4v1744344730888!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3810.796336336571!2d-112.11760330300561!3d41.625425165652096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87549df3b16471a5%3A0x747d7ed31cea47e7!2sBear%20River%20City%2C%20UT!5e0!3m2!1spt-BR!2sus!4v1744344730888!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     </section>
 
     <!-- Employees -->
@@ -54,15 +53,15 @@
       <div class="team-gallery">
         <figure>
           <img src="images/employee1.webp" alt="Anna the guide">
-          <figcaption>Anna - Tour Guide</figcaption>
+          <figcaption>Anna – Tour Guide</figcaption>
         </figure>
         <figure>
           <img src="images/employee2.jpg" alt="Jake in Customer Support">
-          <figcaption>Jake - Customer Support</figcaption>
+          <figcaption>Jake – Customer Support</figcaption>
         </figure>
         <figure>
           <img src="images/employee3.jpg" alt="Maya the Safety Officer">
-          <figcaption>Maya - Safety Officer</figcaption>
+          <figcaption>Maya – Safety Officer</figcaption>
         </figure>
       </div>
     </section>
@@ -71,21 +70,33 @@
     <section>
       <h2>Send Us a Message</h2>
       <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="useremail">Email Address:</label>
+        <input type="email" id="useremail" name="useremail" required>
 
         <p>Purpose of your message:</p>
-        <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
-        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
-        <label><input type="radio" name="purpose" value="website"> Website Suggestion</label><br><br>
+        <label for="general">
+          <input type="radio" id="general" name="purpose" value="general" required>
+          General Inquiry
+        </label><br>
+        <label for="reservation">
+          <input type="radio" id="reservation" name="purpose" value="reservation">
+          Reservation Question
+        </label><br>
+        <label for="website">
+          <input type="radio" id="website" name="purpose" value="website">
+          Website Suggestion
+        </label><br><br>
 
         <label for="message">Your Message:</label>
         <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
 
-        <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label><br><br>
+        <label for="subscribe">
+          <input type="checkbox" id="subscribe" name="subscribe">
+          Please subscribe me to the monthly newsletter
+        </label><br><br>
 
         <button type="submit">Send Message</button>
       </form>
